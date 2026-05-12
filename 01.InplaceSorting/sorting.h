@@ -1,21 +1,55 @@
 #ifndef SORTING_H
 #define SORTING_H
 
-// Header-only
+#include <iterator>
+#include <functional>
+#include <algorithm>   // для std::swap, std::partition
 
-// Для swap
-#include "collvalue.h"
-
-// ----------------------------- Пузырёк (например) --------------------------------------
-template <typename Iterator>
-void bubble_sort(Iterator begin, Iterator end)
+// ----------------------------- Пузырьковая сортировка (O(N²)) ---------------------------
+template <typename Iterator, typename Compare = std::less<>>
+void bubble_sort(Iterator begin, Iterator end, Compare comp = {})
 {
+    if (begin == end) return;
+    for (auto i = begin; i != end; ++i)
+    {
+        bool swapped = false;
+        for (auto j = begin; j != end - 1; ++j)
+        {
+            auto next = j;
+            ++next;
+            if (comp(*next, *j))
+            {
+                using std::swap;
+                swap(*j, *next);
+                swapped = true;
+            }
+        }
+        if (!swapped) break;
+    }
 }
 
-// --------------------------- QuickSort (например) ---------------------------------------
-template <typename Iterator>
-void quick_sort(Iterator begin, Iterator end)
+// --------------------------- Быстрая сортировка (O(N log N) средн.) ------------------------
+template <typename Iterator, typename Compare = std::less<>>
+void quick_sort(Iterator begin, Iterator end, Compare comp = {})
 {
+    if (std::distance(begin, end) < 2) return;
+    // Выбор опорного элемента: последний
+    auto pivot = end;
+    --pivot;
+    auto partition_point = begin;
+    for (auto it = begin; it != pivot; ++it)
+    {
+        if (comp(*it, *pivot))
+        {
+            using std::swap;
+            swap(*partition_point, *it);
+            ++partition_point;
+        }
+    }
+    using std::swap;
+    swap(*partition_point, *pivot);
+    auto mid = partition_point;
+    quick_sort(begin, mid, comp);
+    quick_sort(++mid, end, comp);
 }
-
 #endif // SORTING_H
