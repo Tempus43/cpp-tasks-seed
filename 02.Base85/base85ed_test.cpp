@@ -33,7 +33,7 @@ TEST(Base85ShortsEncode, TrivialShortEncodes)
 
 TEST(Base85Encode, Empty)
 {
-    EXPECT_EQ(base85::encode({}), std::vector<uint8_t>{});
+    EXPECT_EQ(base85::encode({}), std::vector<uint8_t> {});
 }
 
 // ------------------- decode -------------------
@@ -47,7 +47,7 @@ TEST(Base85ShortsDecode, TrivialShortDecodes)
 
 TEST(Base85Decode, Empty)
 {
-    EXPECT_EQ(base85::decode({}), std::vector<uint8_t>{});
+    EXPECT_EQ(base85::decode({}), std::vector<uint8_t> {});
 }
 
 TEST(Base85Decode, InvalidChar)
@@ -98,7 +98,10 @@ TEST(Base85RoundTrip, AllSingleBytes)
 
 TEST(Base85RoundTrip, BoundaryLengths)
 {
-    for (size_t len : {0, 1, 2, 3, 4, 5, 7, 8, 9, 15, 16, 17, 127, 128, 129})
+    for (size_t len :
+            {
+                0, 1, 2, 3, 4, 5, 7, 8, 9, 15, 16, 17, 127, 128, 129
+            })
     {
         std::vector<uint8_t> original(len);
         for (size_t i = 0; i < len; ++i)
