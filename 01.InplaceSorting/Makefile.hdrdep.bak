@@ -1,0 +1,30 @@
+
+# DO NOT DELETE
+
+sort_demo.o: collvalue.h sorting.h
+sort_test.o: /usr/include/gtest/gtest.h
+sort_test.o: /usr/include/gtest/gtest-assertion-result.h
+sort_test.o: /usr/include/gtest/gtest-message.h
+sort_test.o: /usr/include/gtest/internal/gtest-port.h /usr/include/ctype.h
+sort_test.o: /usr/include/features.h /usr/include/features-time64.h
+sort_test.o: /usr/include/stdc-predef.h /usr/include/stdio.h
+sort_test.o: /usr/include/stdlib.h /usr/include/alloca.h
+sort_test.o: /usr/include/string.h /usr/include/strings.h
+sort_test.o: /usr/include/gtest/internal/custom/gtest-port.h
+sort_test.o: /usr/include/gtest/internal/gtest-port-arch.h
+sort_test.o: /usr/include/unistd.h /usr/include/regex.h
+sort_test.o: /usr/include/gtest/gtest-death-test.h
+sort_test.o: /usr/include/gtest/internal/gtest-death-test-internal.h
+sort_test.o: /usr/include/gtest/gtest-matchers.h
+sort_test.o: /usr/include/gtest/gtest-printers.h
+sort_test.o: /usr/include/gtest/internal/gtest-internal.h
+sort_test.o: /usr/include/gtest/internal/gtest-filepath.h
+sort_test.o: /usr/include/gtest/internal/gtest-string.h
+sort_test.o: /usr/include/gtest/internal/gtest-type-util.h
+sort_test.o: /usr/include/gtest/internal/custom/gtest-printers.h
+sort_test.o: /usr/include/gtest/gtest-param-test.h
+sort_test.o: /usr/include/gtest/internal/gtest-param-util.h
+sort_test.o: /usr/include/gtest/gtest-test-part.h
+sort_test.o: /usr/include/gtest/gtest-typed-test.h
+sort_test.o: /usr/include/gtest/gtest_pred_impl.h
+sort_test.o: /usr/include/gtest/gtest_prod.h sorting.h
