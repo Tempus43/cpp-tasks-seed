@@ -4,7 +4,6 @@
 
 - [![BuildUtestItest](../../actions/workflows/make_and_test.yml/badge.svg)](../../actions/workflows/make_and_test.yml) — Make и тесты
 - [![StyleCheck](../../actions/workflows/lint_style_check.yml/badge.svg)](../../actions/workflows/lint_style_check.yml) — CLang Tidy и форматирование
->>>>>>> 2f7288e4cb7b4eab7071a1fc920a8a5f64840a90
 
 ## Задания
 
