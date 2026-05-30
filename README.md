@@ -2,8 +2,8 @@
 
 ## Состояние
 
-- ![BuildUtestItest](https://github.com/dluciv/cpp-tasks-seed/actions/workflows/make_and_test.yml/badge.svg) — Make и тесты
-- ![StyleCheck](https://github.com/dluciv/cpp-tasks-seed/actions/workflows/lint_style_check.yml/badge.svg) — CLang Tidy и форматирование
+- ![BuildUtestItest](https://github.com/Tempus43/cpp-tasks-seed/actions/workflows/make_and_test.yml/badge.svg) — Make и тесты
+- ![StyleCheck](https://github.com/Tempus43/cpp-tasks-seed/actions/workflows/lint_style_check.yml/badge.svg) — CLang Tidy и форматирование
 
 ## Задания
 
